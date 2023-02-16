@@ -76,4 +76,15 @@ public class MainActivity extends AppCompatActivity {
         Log.w(TAG, "onResume warning");
         Log.v(TAG, "onResume verbose");
     }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        Toast.makeText(this, "onRestart", Toast.LENGTH_SHORT).show();
+        Log.i(TAG, "onRestart information");
+        Log.e(TAG, "onRestart error");
+        Log.d(TAG, "onRestart debug");
+        Log.w(TAG, "onRestart warning");
+        Log.v(TAG, "onRestart verbose");
+    }
 }
