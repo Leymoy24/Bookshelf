@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Practical work 1</string>
+    <string name="home">Домой</string>
+    <string name="reading">Читаю</string>
 </resources>
