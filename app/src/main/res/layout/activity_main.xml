@@ -8,8 +8,8 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
-        android:layout_width="409dp"
-        android:layout_height="729dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -174,13 +174,14 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/main_activity__editText_name3" />
+            app:layout_constraintTop_toBottomOf="@+id/main_activity__editText_name3"
+            android:onClick="buttonSaveClickHandler" />
 
         <TextView
             android:id="@+id/main_activity__textView_bookshelf"
             android:layout_width="240dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
+            android:layout_marginStart="15dp"
             android:gravity="center"
             android:textColor="@color/primary_blue"
             android:textSize="25sp"
@@ -244,11 +245,12 @@
             android:id="@+id/main_activity_image_book2"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:layout_marginTop="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/main_activity__navbutton_layout"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/button2"
+            app:layout_constraintVertical_bias="0.357"
             app:srcCompat="@drawable/books_picture" />
 
 
