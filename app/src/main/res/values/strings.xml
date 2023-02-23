@@ -2,4 +2,12 @@
     <string name="app_name">Practical work 1</string>
     <string name="home">Домой</string>
     <string name="reading">Читаю</string>
+    <string name="settings">Настройки</string>
+    <string name="bookshelf">Bookshelf</string>
+    <string name="enter_name">Введите имя</string>
+    <string name="enter_last_name">Введите фамилию</string>
+    <string name="enter_email">Введите email</string>
+    <string name="save">Сохранить</string>
+    <string name="go_to_profile">Перейти в профиль</string>
+    <string name="welcome_to_bookshelf">Добро пожаловать в Bookshelf!</string>
 </resources>
