@@ -48,22 +48,14 @@ public class MainActivity extends AppCompatActivity {
                 Log.d(TAG, "Click settings");
             }
         });
-//
-//        binding.button2.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                String name1 = binding.mainActivityEditTextName1.getText().toString();
-//
-//                Intent intent = new Intent(MainActivity.this, SecondActivity.class);
-//                intent.putExtra(AGE_KEY, name1);
-//                mStartForResult.launch(intent);
-//            }
-//        });
-
     }
 
     public void onClickProfile(View view) {
+        EditText editText = findViewById(R.id.main_activity__editText_name1);
+        String data = editText.getText().toString();
+
         Intent intent = new Intent(this, SecondActivity.class);
+        intent.putExtra("result", data);
         startActivityForResult(intent, REQUEST_CODE);
     }
 
