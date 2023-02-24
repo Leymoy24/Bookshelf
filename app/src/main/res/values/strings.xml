@@ -10,4 +10,11 @@
     <string name="save">Сохранить</string>
     <string name="go_to_profile">Перейти в профиль</string>
     <string name="welcome_to_bookshelf">Добро пожаловать в Bookshelf!</string>
+    <string name="text_is_missing">Данные отсутсвуют</string>
+    <string name="your_profile">Информация и статистика</string>
+    <string name="name">Имя:</string>
+    <string name="last_name">Фамилия:</string>
+    <string name="email">Email:</string>
 </resources>
+
+
