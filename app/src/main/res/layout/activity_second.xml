@@ -10,19 +10,19 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="500dp"
+        android:background="@drawable/layout_lower_corners"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:background="@drawable/layout_lower_corners">
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/second_activity__textName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
-            android:textColor="@color/black"
             android:hint="@string/text_is_missing"
             android:text="@string/name"
+            android:textColor="@color/black"
             android:textSize="@dimen/text_size"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.13"
@@ -34,8 +34,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
-            android:textColor="@color/black"
             android:text="@string/last_name"
+            android:textColor="@color/black"
             android:textSize="@dimen/text_size"
             app:layout_constraintEnd_toEndOf="@+id/second_activity__textName"
             app:layout_constraintHorizontal_bias="0.0"
@@ -47,8 +47,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
-            android:textColor="@color/black"
             android:text="@string/email"
+            android:textColor="@color/black"
             android:textSize="@dimen/text_size"
             app:layout_constraintEnd_toEndOf="@+id/second_activity__textLastName"
             app:layout_constraintHorizontal_bias="0.0"
@@ -102,8 +102,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="60dp"
             android:text="@string/your_profile"
-            android:textSize="28sp"
             android:textColor="@color/black"
+            android:textSize="28sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -113,8 +113,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="60dp"
-            android:text="@string/save"
             android:backgroundTint="@color/primary_blue"
+            android:text="@string/save"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
@@ -135,11 +135,11 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginRight="240dp"
-            android:layout_marginVertical="10dp"
             android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
             android:layout_alignParentBottom="true"
+            android:layout_marginVertical="10dp"
+            android:layout_marginRight="240dp"
             android:orientation="vertical">
 
             <ImageView
@@ -176,12 +176,12 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_alignParentLeft="true"
-            android:layout_marginLeft="120dp"
-            android:layout_alignParentRight="true"
-            android:layout_marginRight="120dp"
-            android:layout_marginVertical="10dp"
             android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
             android:layout_alignParentBottom="true"
+            android:layout_marginVertical="10dp"
+            android:layout_marginLeft="120dp"
+            android:layout_marginRight="120dp"
             android:orientation="vertical">
 
             <ImageView
