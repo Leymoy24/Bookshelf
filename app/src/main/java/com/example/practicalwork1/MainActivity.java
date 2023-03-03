@@ -35,6 +35,5 @@ public class MainActivity extends AppCompatActivity {
         ft.replace(R.id.constraint_layout_main, new FirstFragment())
                 .addToBackStack(null)
                 .commit();
-
     }
 }
