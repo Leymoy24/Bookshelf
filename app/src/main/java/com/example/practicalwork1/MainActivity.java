@@ -31,11 +31,10 @@ public class MainActivity extends AppCompatActivity {
         ActivityMainBinding binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        FirstFragment firstFragment = new FirstFragment();
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-        ft.replace(R.id.constraint_layout_main, firstFragment);
-        ft.addToBackStack(null);
-        ft.commit();
+        ft.replace(R.id.constraint_layout_main, new FirstFragment())
+                .addToBackStack(null)
+                .commit();
 
     }
 }
