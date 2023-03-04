@@ -14,9 +14,27 @@ import android.widget.LinearLayout;
 
 public class NavigationBarFragment extends Fragment {
 
+    private FragmentManager fragmentManager;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_navigation_bar, container, false);
+        View view = inflater.inflate(R.layout.fragment_navigation_bar, container, false);
+
+
+        LinearLayout linearLayout = view.findViewById(R.id.main_activity__layout_home_button);
+        linearLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                fragmentManager = getParentFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.constraint_layout_main, new ThirdFragment());
+                fragmentTransaction.addToBackStack(null).commit();
+            }
+        });
+
+
+
+        return view;
     }
 }
