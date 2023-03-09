@@ -21,9 +21,9 @@ public class NavigationBarFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_navigation_bar, container, false);
 
-
-        LinearLayout linearLayout = view.findViewById(R.id.main_activity__layout_home_button);
-        linearLayout.setOnClickListener(new View.OnClickListener() {
+        //Переход в ThirdFragment по нажатии на кнопку main_activity__layout_home_button
+        LinearLayout linearLayout_home = view.findViewById(R.id.main_activity__layout_home_button);
+        linearLayout_home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 fragmentManager = getParentFragmentManager();
@@ -33,6 +33,17 @@ public class NavigationBarFragment extends Fragment {
             }
         });
 
+        //Переход в ReadingFragment по нажатии на кнопку main_activity__layout_book_button
+        LinearLayout linearLayout_reading = view.findViewById(R.id.main_activity__layout_book_button);
+        linearLayout_reading.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                fragmentManager = getParentFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.constraint_layout_main, new ReadingFragment());
+                fragmentTransaction.addToBackStack(null).commit();
+            }
+        });
 
 
         return view;
