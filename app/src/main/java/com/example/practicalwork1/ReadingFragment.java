@@ -6,9 +6,11 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.example.practicalwork1.adapter.BookAdapter;
 
@@ -31,18 +33,29 @@ public class ReadingFragment extends Fragment {
         bookList = createBookList();
         bookAdapter = new BookAdapter(bookList);
         recyclerView.setAdapter(bookAdapter);
+
+        // Отображение Toast и сообщения в Log при нажатии на элемент списка
+        bookAdapter.setOnItemClickListener(new BookAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(int position) {
+                Toast.makeText(getActivity(), "Clicking on a list item", Toast.LENGTH_SHORT).show();
+                Log.i("tag","Clicking on a list item");
+            }
+        });
+
         return view;
     }
 
-    // метод для создания списка книг
+    // Метод для создания списка книг
     private List<Book> createBookList() {
         List<Book> bookList = new ArrayList<>();
-        // добавляем 200 элементов
+        // Добавляем 200 элементов
         for (int i = 1; i <= 200; i++) {
-            // создаем книгу и добавляем в список
+            // Создаем книгу и добавляем в список
             Book book = new Book("Book " + i, R.drawable.book_6);
             bookList.add(book);
         }
         return bookList;
     }
+
 }

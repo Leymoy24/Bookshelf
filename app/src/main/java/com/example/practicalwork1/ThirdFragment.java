@@ -4,10 +4,13 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.example.practicalwork1.adapter.ListAdapter;
 
@@ -31,7 +34,16 @@ public class ThirdFragment extends Fragment {
         ListAdapter adapter = new ListAdapter(getContext(), items);
         listView.setAdapter(adapter);
 
+        // Отображение Toast и сообщения в Log при нажатии на элемент списка
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Toast.makeText(getActivity(), "Clicking on a list item", Toast.LENGTH_SHORT).show();
+                Log.i("tag","Clicking on a list item");
+            }
+        });
 
         return view;
     }
+
 }

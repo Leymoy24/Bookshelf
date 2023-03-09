@@ -15,9 +15,20 @@ import java.util.List;
 
 public class BookAdapter extends RecyclerView.Adapter<BookAdapter.ViewHolder> {
     private List<Book> bookList;
+    private OnItemClickListener listener;
 
     public BookAdapter(List<Book> bookList) {
         this.bookList = bookList;
+    }
+
+
+    public interface OnItemClickListener {
+        void onItemClick(int position);
+    }
+
+    // Сеттер для listener
+    public void setOnItemClickListener(OnItemClickListener listener) {
+        this.listener = listener;
     }
 
     @Override
@@ -31,6 +42,16 @@ public class BookAdapter extends RecyclerView.Adapter<BookAdapter.ViewHolder> {
         Book book = bookList.get(position);
         holder.textView.setText(book.getName());
         holder.imageView.setImageResource(book.getImageResource());
+
+        // Обработчик нажатия на элемент
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (listener != null) {
+                    listener.onItemClick(position);
+                }
+            }
+        });
     }
 
     @Override
